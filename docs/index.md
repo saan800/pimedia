@@ -1,8 +1,9 @@
 # PiMedia Build
 
-Build steps
+## Build steps
 
-- [Initial Setup](01_Initial_Setup.md)
+1. [Setup Raspberry Pi with headless access](01_setup_headless_raspberry_pi.md)
+2. a
 
 
 

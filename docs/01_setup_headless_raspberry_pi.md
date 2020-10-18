@@ -1,4 +1,4 @@
-# Initial Setup
+# Setup Raspberry Pi with headless access
 
 Instructions are for windows laptop specifically, but should be similar for all OS.
 
@@ -19,8 +19,7 @@ Instructions are for windows laptop specifically, but should be similar for all 
 
 On laptop:
 
-- Install ssh client
-  - [Putty](https://www.putty.org/)
+- Install ssh client (eg [Putty](https://www.putty.org/))
 - Install [nmap](https://nmap.org/download.html)
 - Open command line
 - Run `ipconfig` to find laptop's IP Address and Subnet Mask
@@ -36,7 +35,7 @@ On laptop:
 ## Connect to Raspberry Pi from laptop
 
 * Open Putty on laptop
-  * `Host Name (or IP address)=192.168.0.54` (from nmap command above)
+  * `Host Name (or IP address)=192.168.0.54` (use IP from nmap command above)
   * `Port=22` 
   * This will connect to command line on Raspberry Pi
 * [Enable VNC](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md)

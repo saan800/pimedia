@@ -25,13 +25,13 @@ On laptop:
 - Open command line
 - Run `ipconfig` to find laptop's IP Address and Subnet Mask
 
-<img src="img/ipconfig.png" />
+<img src="img/ipconfig.PNG" />
 
 - Using the info from the above run `nmap` in command line to find all devices connected to local network
   - `nmap -sn 192.168.0.0/24`
   - Look for entry that says `Raspberry Pi` (you may need to run multiple times)
 
-<img src="img/nmap.png" />
+<img src="img/nmap.PNG" />
 
 ## Connect to Raspberry Pi from laptop
 

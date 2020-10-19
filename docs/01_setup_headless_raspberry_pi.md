@@ -13,7 +13,7 @@ Instructions are for windows laptop specifically, but should be similar for all 
     - Add empty file named `ssh` to root directory
 - Eject SD card from laptop and insert into Pi
 - Power on Raspberry Pi and give it a few minutes to startup
-  - Should not need to be connected to monitor/TV
+  - Should not need to be connected to monitor/TV, but it can be useful to see whats going on
 
 ## Find Raspberry Pi's IP Address
 
@@ -34,11 +34,51 @@ On laptop:
 
 ## Connect to Raspberry Pi from laptop
 
+### Command line
+
 * Open Putty on laptop
   * `Host Name (or IP address)=192.168.0.54` (use IP from nmap command above)
   * `Port=22` 
+  * `login as=pi`
+  * `password=raspberry`
   * This will connect to command line on Raspberry Pi
-* [Enable VNC](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md)
+* Change password
+  * When you connect to the Pi command line, you will see a message like `SSH is enabled and the default password for the 'pi' user has not been changed. This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.`. 
+  * Lets fix that and create a more secure user login
+
+```
+pi@raspberrypi:~ $ sudo passwd pi
+New password: 
+Retype new password: 
+passwd: password updated successfully
+```
+
+### Desktop view
+
+[Enable VNC (Virtual Network Computing)](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md)
+
+#### On Raspberry Pi command line
+
+```
+sudo apt update
+sudo apt install realvnc-vnc-server realvnc-vnc-viewer
+sudo raspi-config
+```
+
+* Enable VNC Server by doing the following:
+  * Navigate to `Interfacing Options`
+  * Scroll down and select `VNC` > `Yes`
+  * Exit setup
+* Find Raspberry Pi IP, run `ifconfig`
+  * If you haven't restarted Pi, the IP should be the same as `Find Raspberry Pi's IP Address` step
+
+#### On laptop
+
+* Install [VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/)
+* Start VNC Viewer
+  * Enter Pi's IP address into bar
+  * Username and password is either `pi` and `raspberry` or whatever you changed it to earlier
+* You should now be able to see and control the Raspberry Pi desktop from your laptop 
 
 ## Thanks to
 

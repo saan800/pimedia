@@ -63,7 +63,7 @@ You need some form of USB storage
 * Connect drive to USB 3.0 port on the Raspberry Pi
 * Start the Pi
   * Depending on the size of the drive, this could take a while
-  * May need to repeat [Find Raspberry Pi's IP Address](https://github.com/saan800/pimedia/blob/main/docs/02_connect_to_raspberry_pi_from_laptop.md#find-raspberry-pis-ip-address) steps
+  * You may need to repeat [Find Raspberry Pi's IP Address](https://github.com/saan800/pimedia/blob/main/docs/02_connect_to_raspberry_pi_from_laptop.md#find-raspberry-pis-ip-address) steps
 
 ## More details
 

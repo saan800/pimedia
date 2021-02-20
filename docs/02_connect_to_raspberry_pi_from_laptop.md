@@ -27,13 +27,15 @@ On laptop:
   * `password=raspberry`
   * This will connect to command line on Raspberry Pi
 
-## Connect to Pi Desktop view (for non-Lite OS install only)
+## Connect to Pi Desktop view from laptop
 
-[Enable VNC (Virtual Network Computing)](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md)
+**NOTES:**
+* For non-Lite OS install only
+* [Enable VNC (Virtual Network Computing)](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md)
 
 ### On Raspberry Pi command line
 
-Reconnect to Pi via SSH and run
+Connect to Pi via SSH and run
 
 ```
 sudo apt install realvnc-vnc-server realvnc-vnc-viewer
@@ -43,9 +45,12 @@ sudo raspi-config
 * Enable VNC Server by doing the following:
   * Navigate to `Interfacing Options`
   * Scroll down and select `VNC` > `Yes`
-  * Exit setup
-* Find Raspberry Pi IP, run `ifconfig`
-  * If you haven't restarted Pi, the IP should be the same as `Find Raspberry Pi's IP Address` step
+  * Navigate back to main menu
+* Update screen resolution so can use VPC Viewer
+  * Navigate to `Display Options` > `Resolution`
+  * Select a resolution other than `Default`
+* Exit setup
+* Reboot Pi 
 
 ### On laptop
 
@@ -53,6 +58,6 @@ sudo raspi-config
 * Start VNC Viewer
   * Enter Pi's IP address into bar
   * Username and password is either `pi` and `raspberry` or whatever you changed it to earlier
-* You should now be able to see and control the Raspberry Pi desktop from your laptop 
+* You should now be able to see and control the Raspberry Pi desktop from your laptop
 
 [Back to index](index.md)

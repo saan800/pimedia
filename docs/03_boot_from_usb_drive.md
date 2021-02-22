@@ -16,7 +16,7 @@ You need some form of USB storage
     * https://thepihut.com/products/retroflag-nespi-4-case-for-raspberry-pi-4
   * Powered USB hub
     * https://www.amazon.co.uk/gp/product/B07JGT17B8
-    * https://www.amazon.co.uk/gp/product/B07CNZLFGZs
+    * https://www.amazon.co.uk/gp/product/B07CNZLFGZ
   * USB C to SSD cable/enclosure (not recommended, but possible)
     * The Pi USB ports will likely not have enough power to reliably run an unpowered USB SSD enclosure
 	* There are some options that have been tested by Pi users. eg

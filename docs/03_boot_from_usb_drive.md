@@ -8,8 +8,9 @@ You need some form of USB storage
 * SSD/HDD to USB 3.0 enclusure
   * PCB's built specifically for Pi to SSD/HDD use
     * make sure it has its own power supply for more reliable/longer lasting SSD/HDD 
+    * https://www.amazon.co.uk/gp/product/B088GN6CPF
+      * ^^ is what I ended up using with a 500Gb SSD for boot/OS drive, and a 4TB SSD for media drive
     * https://www.amazon.co.uk/gp/product/B07VXF2HJG
-	* https://www.amazon.co.uk/gp/product/B088GN6CPF
   * Raspberry Pi 4 case with built in SSD/HDD expansion
     * https://thepihut.com/products/argon-one-m-2-raspberry-pi-4-case
     * https://thepihut.com/products/retroflag-nespi-4-case-for-raspberry-pi-4

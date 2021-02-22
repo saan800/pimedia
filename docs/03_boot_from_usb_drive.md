@@ -17,7 +17,7 @@ You need some form of USB storage
   * Powered USB hub
     * https://www.amazon.co.uk/gp/product/B07JGT17B8
     * https://www.amazon.co.uk/gp/product/B07CNZLFGZ
-  * USB C to SSD cable/enclosure (not recommended, but possible)
+  * USB 3.0 A to SSD cable/enclosure (not recommended, but possible)
     * The Pi USB ports will likely not have enough power to reliably run an unpowered USB SSD enclosure
 	* There are some options that have been tested by Pi users. eg
 	  * https://thepihut.com/collections/raspberry-pi-cables/products/ssd-to-usb-3-0-cable-for-raspberry-pi

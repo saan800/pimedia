@@ -10,17 +10,26 @@ You need some form of USB storage
 * SSD/HDD to USB 3.0 enclusure
   * PCB's built specifically for Pi to SSD/HDD use
     * make sure it has its own power supply for more reliable/longer lasting SSD/HDD 
-    * https://www.amazon.co.uk/gp/product/B07VXF2HJGfunctionality
+    * https://www.amazon.co.uk/gp/product/B088GN6CPF
+      * ^^ is what I ended up using with a 500Gb SSD for boot/OS drive, and a 4TB SSD for media drive
+    * https://www.amazon.co.uk/gp/product/B07VXF2HJG
   * Raspberry Pi 4 case with built in SSD/HDD expansion
     * https://thepihut.com/products/argon-one-m-2-raspberry-pi-4-case
     * https://thepihut.com/products/retroflag-nespi-4-case-for-raspberry-pi-4
   * Powered USB hub
     * https://www.amazon.co.uk/gp/product/B07JGT17B8
-    * https://www.amazon.co.uk/gp/product/B07CNZLFGZs
-  * USB C enclosure (not recommended)
+    * https://www.amazon.co.uk/gp/product/B07CNZLFGZ
+  * USB 3.0 A to SSD cable/enclosure (not recommended, but possible)
     * The Pi USB ports will likely not have enough power to reliably run an unpowered USB SSD enclosure
-    * https://www.amazon.co.uk/gp/product/B07RZBTNTN
+	* There are some options that have been tested by Pi users. eg
+	  * https://thepihut.com/collections/raspberry-pi-cables/products/ssd-to-usb-3-0-cable-for-raspberry-pi
  * A compatible SSD/HDD drive to fit your chosen enclosure
+   * **IMPORTANT:** Raspberry Pi OS currently only works with drives formatted as (MBR), and these drives are limited to 2Tb
+     * If you want a media drive larger than 2Tb, and to boot the Pi from SSD, then you will need to have dual SSD drives - one <=2TB for the OS, and one for the media
+       * https://www.amazon.co.uk/gp/product/B088GN6CPF 
+       * Ref: 
+	     * https://www.raspberrypi.org/forums/viewtopic.php?t=241914
+	     * https://docs.microsoft.com/en-us/windows-server/storage/disk-management/change-an-mbr-disk-into-a-gpt-disk
 * Standard Portable USB drive (not recommended)
   * Its possible to setup with a USB flash drive, but apparently it does not perform well. Use this option only to test out the process
 

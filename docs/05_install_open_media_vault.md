@@ -84,8 +84,16 @@ Windows
 * Go to `System` > `OMV-Extras` and `Docker` tab
   * Paste the path into `Docker Storage` text box
   * `Save`
-  * In top nav in `Docker` select `Docker` dropdown and `Install`
+  * In top nav in tab select `Docker` dropdown and `Install`
     *  It will take a few minutes to run
+  * The `Status` field should now show `Installed and running`
+  * In top nav in tab select `Portainer` dropdown and `Install`
+
+<img src="img/05_docker_and_portainer_installed.PNG" />
+
+* Click `Open Portainer` and create an admin user
+  * Choose `manage the local docker environment`
+  * Click on the `local` docker instance to see various details
 
 
 ## More details

@@ -10,13 +10,6 @@ Instructions are specifically for a Raspberry Pi 4 Model B and Windows 10 laptop
 2. [Connect to Raspberry Pi from laptop](02_connect_to_raspberry_pi_from_laptop.md)
 3. [Boot from USB drive](03_boot_from_usb_drive.md)
 4. [Rename `raspberrypi` to `pimedia`](04_rename_pi.md)
-5. 
-
-
-
-TODO
-
-- https://www.raspberrypi.org/documentation/remote-access/samba.md
-- https://www.raspberrypi.org/documentation/remote-access/ip-address.md
+5. [Setup Open Media Vault](05_install_open_media_vault.md)
 
 

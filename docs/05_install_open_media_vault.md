@@ -1,4 +1,4 @@
-# Open Media Vault
+# Setup Open Media Vault
 
 ## Install Open Media Vault
 
@@ -9,7 +9,7 @@
 wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/installScript/master/install | sudo bash
 ```
 
-## Setup Open Media Vault
+## Basic Open Media Vault configuration
 
 * Open OMV in laptop web browser: `http://[RASPBERRY_PI_IP]/`
   * Or if you've [Renamed `raspberrypi` to `pimedia`](04_rename_pi.md) you should be able to open OMV via `http://pimedia/`
@@ -77,7 +77,15 @@ Windows
 
 ## Docker using Portainer
 
-
+* In OMV go to `Access Rights Management` > `Shared Folders`
+  * Highlight the `docker` folder that created previously
+  * Click the arrow next to `Comment` heading in table and check `Columns` > `Absolute Path`
+  * Note the path of the `docker` shared folder
+* Go to `System` > `OMV-Extras` and `Docker` tab
+  * Paste the path into `Docker Storage` text box
+  * `Save`
+  * In top nav in `Docker` select `Docker` dropdown and `Install`
+    *  It will take a few minutes to run
 
 
 ## More details

@@ -1,5 +1,7 @@
 # Boot from USB drive
 
+**NOTE:** This will remove any existing data on the USB drive
+
 SD cards were never intended for fast read-write access. Attaching a SSD drive via USB 3.0 port can [provide a dramatic increase to performance](https://www.tomshardware.com/uk/news/raspberry-pi-4-ssd-test,39811.html). The Raspberry Pi 4 B comes with two USB 3.0 ports.
 
 ## Hardware
@@ -27,28 +29,29 @@ You need some form of USB storage
 ### Format USB drive (optional)
 
 You may need to format the USB drive partitions before continuing. There are a few things that you should consider before doing so.
+
 * Which OS do you wish to access the NAS from?
   * Windows: NTSF format will allow you to setup a shared network drive from your laptop, so can easily access files and drag/drop from laptop to NAS
 * Other?
 
 To merge and format Unallocated partitions
+
 * Connact USB drive to laptop
 * Open Windows 10 Disk Management and inspect the drive
+* If your drive is larger than 2Tb and/or you can see multiple partiions:
+  * Right click on any allocated partitions and `Delete volume`
+  * Right click on the left `Disk 1 - Basic - Online` area and click `Convert to MTB disk`
+  * You should now see `Unallocated` partitions of 2GB
 
 <img src="img/03_usb_disk_partitions.PNG" />
 
-* If your drive is larger than 2Tb and/or you can see multiple partiions:
-  * Right click on any allocated partitions and `Delete volume`
-  * Right click on the left `Disk 1 - Basic - Online` area and click `Convert to GTB disk`
-  * You should now see only one `Unallocated` partition
-* Right click on the `Unallocated` partition
+* Right click on the `Unallocated` partition(s)
   * `New simple volume` > `Next`
   * Ensure the `Simple volume size` is set to the maximum
   * Select `Assign the following drive letter`
   * Format with chosen file system (ie `ntfs`) and assign a label if you want
-* Safely eject USB drive from laptop
 
-More reading
+More info
 * https://openmediavault.readthedocs.io/en/5.x/administration/storage/filesystems.html
 * https://www.raspberrypi.org/documentation/configuration/external-storage.md
 * https://www.windowscentral.com/how-delete-drive-partition-windows-10
@@ -56,8 +59,6 @@ More reading
 
 
 ### Install Raspberry Pi OS Lite on USB drive
-
-**NOTE:** This will remove any existing data on the USB drive
 
 * Connect USB drive to laptop
 * Follow the steps from [Setup Raspberry Pi with headless access > Setup SD Card](01_setup_headless_raspberry_pi.md#setup-sd-card), except do for USB drive instead of SD Card
@@ -73,8 +74,9 @@ More reading
 
 <img src="img/03_verify_connection_to_usb_drive.PNG" />
 
-* Its showing that we have two drives attached to the Pi
-  * `sda`: This is my WD USB drive. Which has 3.7Tb drive
+* Its showing that we have three drives attached to the Pi
+  * `sda`: This is my WD USB 500GB drive, which I will use for the OS and apps I run on the Raspberry Pi
+  * `sdb`: This is my WD USB 4TB drive, which I will use for NAS media storage
   * `mmcblk0`: This is the 8GB SD Card in the Pi
 
 ## Prepare Pi to Boot from USB drive
@@ -111,10 +113,10 @@ More reading
 * Connect drive to USB 3.0 port on the Raspberry Pi
 * Start the Pi
   * Depending on the size of the drive, this could take a while
-  * You may need to repeat [Find Raspberry Pi's IP Address](https://github.com/saan800/pimedia/blob/main/docs/02_connect_to_raspberry_pi_from_laptop.md#find-raspberry-pis-ip-address) steps
+  * You may need to repeat [Find Raspberry Pi's IP Address](02_connect_to_raspberry_pi_from_laptop.md#find-raspberry-pis-ip-address) steps
 * To confirm that Pi is loading from USB run `sudo lsblk -o UUID,NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL,MODEL`
 
-You'll see a response like this with `boot` on the USB drive:
+You'll see a response like this with `boot` mountpoint on the USB drive:
 
 <img src="img/03_loading_from_usb.PNG" />
 

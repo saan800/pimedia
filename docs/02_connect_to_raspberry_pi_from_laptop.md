@@ -20,12 +20,20 @@ On laptop:
 
 ## Connect to Pi command line
 
-* Open SSH client on laptop
+* Open SSH client on laptop (eg Putty)
   * `Host Name (or IP address)=192.168.0.54` (use IP from nmap command above)
   * `Port=22` 
   * `login as=pi`
-  * `password=raspberry`
   * This will connect to command line on Raspberry Pi
+
+OR
+
+* Open powershell command line
+  * `ssh pi@192.168.0.54`
+
+Then login
+* `password=raspberry` (default password, but should be changed during initial setup)
+
 
 ## Connect to Pi Desktop view from laptop
 

@@ -11,5 +11,7 @@ Instructions are specifically for a Raspberry Pi 4 Model B and Windows 10 laptop
 3. [Boot from USB drive](03_boot_from_usb_drive.md)
 4. [Rename `raspberrypi` to `pimedia`](04_rename_pi.md)
 5. [Setup Open Media Vault](05_install_open_media_vault.md)
+6. [Setup Docker in Open Media Vault](06_omv_with_docker.md)
+7. [Plex Media Server](07_plex_media_server.md)
 
 

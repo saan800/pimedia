@@ -48,8 +48,10 @@ wget -O - https://raw.githubusercontent.com/OpenMediaVault-Plugin-Developers/ins
   * Go to `Storage` > `File Systems`
 * Create shared folders
   * Go to `Access Rights Management` > `Shared Folders`
-  * Add a `docker` folder to the drive that will contain apps
-  * Add a `public` folder to the drive that will contain media files
+  * Add the following folders
+    * `containers` - docker container config and extra storage for app
+    * `docker`
+    * `public` - contain media files
   * On each of the shared folders
     * Click `Privileges` and add `Read/Write` to appropriate users (eg `docker` should only be allowed for admin users and `pi`)
     * `acl` ???
@@ -75,32 +77,10 @@ Windows
 
 <img src="img/05_shared_network_drives.PNG" />
 
-## Docker using Portainer
-
-* In OMV go to `Access Rights Management` > `Shared Folders`
-  * Highlight the `docker` folder that created previously
-  * Click the arrow next to `Comment` heading in table and check `Columns` > `Absolute Path`
-  * Note the path of the `docker` shared folder
-* Go to `System` > `OMV-Extras` and `Docker` tab
-  * Paste the path into `Docker Storage` text box
-  * `Save`
-  * In top nav in tab select `Docker` dropdown and `Install`
-    *  It will take a few minutes to run
-  * The `Status` field should now show `Installed and running`
-  * In top nav in tab select `Portainer` dropdown and `Install`
-
-<img src="img/05_docker_and_portainer_installed.PNG" />
-
-* Click `Open Portainer` and create an admin user
-  * Choose `manage the local docker environment`
-  * Click on the `local` docker instance to see various details
-
-
 ## More details
 
 * https://pimylifeup.com/raspberry-pi-openmediavault/
 * [Install OpenMediaVault 5 on Raspberry Pi 4](https://www.youtube.com/watch?v=5YwQLJaeel0&list=PLulABMF2ltKoQFbhWSZpvhQx9KXXMibKa&index=22)
 * [OpenMediaVault 5 NAS server installation on Raspberry Pi 4](https://www.youtube.com/watch?v=InKFsKp865c&list=PLulABMF2ltKoQFbhWSZpvhQx9KXXMibKa&index=23)
-* [Docker installation on External storage OpenMediaVault 5 with Portainer using Raspberry Pi 4](https://www.youtube.com/watch?v=HinflCTwFcE&list=PLulABMF2ltKoQFbhWSZpvhQx9KXXMibKa&index=24)
 
 [Back to index](index.md)

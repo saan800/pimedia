@@ -39,7 +39,7 @@ Then login
 
 **NOTES:**
 * For non-Lite OS install only
-* [Enable VNC (Virtual Network Computing)](https://www.raspberrypi.org/documentation/remote-access/vnc/README.md)
+* [Enable VNC (Virtual Network Computing)](https://www.raspberrypi.com/documentation/computers/remote-access.html#enabling-the-vnc-server)
 
 ### On Raspberry Pi command line
 

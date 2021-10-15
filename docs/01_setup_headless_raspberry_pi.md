@@ -7,11 +7,11 @@ You don't need a monitor, screen or tv to be able to use your Raspberry Pi. You 
 * Insert SD Card into laptop
 * [Download Raspberry Pi Imager and install Raspberry Pi OS on SD Card](https://www.raspberrypi.org/downloads/)
   * Raspberry Pi OS Lite (32 bit)
-    * **PREFERRED:** if you are going to boot from a USB drive
+    * if you are going to boot from a USB drive
     * uses less CPU and memory, faster to create images and boot Pi
     * only have access to the command line (no GUI desktop)
   * Raspberry Pi OS (32 bit)
-    * if you want GUI desktop
+    * **PREFERRED FOR PIMEDIA BUILD:** if you want GUI desktop
   * Raspberry Pi OS Full (32 bit)
     * if you want GUI desktop with all RPi apps installed
 * You'll probably need to remove SD Card and re-plug into laptop for next steps
